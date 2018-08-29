@@ -137,8 +137,7 @@ uint64_t Checker::getBestGoodCombPerBox(uint64_t &current, const vector<uint64_t
         uint64_t choice = goods_combs[i];
         uint64_t filtered_choice = 0;
         int size = 0;
-        int good_id = 0;
-        for (; good_id < m_goods_num; ++good_id)
+        for (int good_id = 0; good_id < m_goods_num; ++good_id)
         {
             // only calculate the sum of size of remained goods.
             if (!(current & uint64_t(1) << good_id) &&
@@ -147,15 +146,28 @@ uint64_t Checker::getBestGoodCombPerBox(uint64_t &current, const vector<uint64_t
                 size += m_goods_size[good_id];
             }
         }
-        if (size > max_size ||
-            (size == max_size && good_id > max_good_id)) {
+        // 'best' means:
+        // 1. the sum of size of remained goods is largest.
+        // for sorted boxes, the combination with smaller sum of size must be included in next box.
+        bool update = size > max_size;
+        if (!update && size == max_size) {
+            // 2. if the value of sum is same, compare the good size descending,
+            // select the one containing larger goods.
+            uint64_t diff = best_choice ^ filtered_choice;
+            for (int good_id = m_goods_num - 1; good_id >= 0; --good_id)
+            {
+                if (diff & uint64_t(1) << good_id) {
+                    update = filtered_choice & uint64_t(1) << good_id;
+                    break;
+                }
+            }
+        }
+        if (update) {
             max_size = size;
             best_id = i;
             best_choice = filtered_choice;
         }
     }
-    // best means the sum of size of remained goods is largest.
-    // for sorted boxes, the combination with smaller sum of size must be included in next box.
     if (best_id >= 0) {
         uint64_t best_choice = goods_combs[best_id];
         current |= best_choice;
@@ -179,6 +191,7 @@ bool Checker::doComplexCheck()
     }
     //for (int i = 0; i < m_boxes_num; ++i)
     //{
+    //    vector<uint64_t> &goods_combs = box_goods_combs[i];
     //    cout << "For box " << i << ", size " << m_boxes_size[i]
     //         << ", has" << goods_combs.size() << " combs:\n";
     //    for (int j = 0; j < goods_combs.size(); ++j)

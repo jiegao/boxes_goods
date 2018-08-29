@@ -14,3 +14,6 @@ cd boxes_goods
 4. run test job
 cd test
 ./run.sh
+
+5. show usage
+checkBoxesGoods -h
