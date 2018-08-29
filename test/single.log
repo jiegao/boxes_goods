@@ -1,0 +1,111 @@
+input file: test_list.txt
+
+Running...
+Sorted boxes: [6, 8]
+Sorted goods: [2, 3, 4, 5]
+=============== Complex check ================
+Find all goods combs for each box, select the best ones to see if they can cover all goods.
+- successful!
+- for box 0, size 6: [2(0), 4(2)]
+- for box 1, size 8: [3(1), 5(3)]
+- remained goods: []
+Finished, duration: 59 us
+
+All goods can be put into the given boxes.
+Finished all, duration: 65 us
+
+Running...
+Sorted boxes: [9, 10]
+Sorted goods: [5, 5, 9]
+=============== Complex check ================
+Find all goods combs for each box, select the best ones to see if they can cover all goods.
+- successful!
+- for box 0, size 9: [9(2)]
+- for box 1, size 10: [5(0), 5(1)]
+- remained goods: []
+Finished, duration: 24 us
+
+All goods can be put into the given boxes.
+Finished all, duration: 25 us
+
+Running...
+Sorted boxes: [9, 10, 11]
+Sorted goods: [2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 8]
+=============== Complex check ================
+Find all goods combs for each box, select the best ones to see if they can cover all goods.
+- successful!
+- for box 0, size 9: [2(5), 2(6), 2(7), 3(9)]
+- for box 1, size 10: [2(4), 8(10)]
+- for box 2, size 11: [2(0), 2(1), 2(2), 2(3), 3(8)]
+- remained goods: []
+Finished, duration: 244 us
+
+All goods can be put into the given boxes.
+Finished all, duration: 245 us
+
+Running...
+Sorted boxes: [5, 8, 11, 15, 20, 30, 32]
+Sorted goods: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+=============== Complex check ================
+Find all goods combs for each box, select the best ones to see if they can cover all goods.
+- failed!
+- for box 0, size 5: [5(4)]
+- for box 1, size 8: [8(7)]
+- for box 2, size 11: [11(10)]
+- for box 3, size 15: [15(14)]
+- for box 4, size 20: [7(6), 13(12)]
+- for box 5, size 30: [14(13), 16(15)]
+- for box 6, size 32: [4(3), 6(5), 10(9), 12(11)]
+- remained goods: [1(0), 2(1), 3(2), 9(8)]
+Finished, duration: 6782 us
+
+The goods cannot be put into the given boxes.
+Finished all, duration: 6783 us
+
+Running...
+Sorted boxes: [10, 20, 30, 40]
+Sorted goods: [2, 3, 3, 3, 4, 5, 6, 7, 8, 9, 11, 12, 22]
+=============== Complex check ================
+Find all goods combs for each box, select the best ones to see if they can cover all goods.
+- successful!
+- for box 0, size 10: [4(4), 6(6)]
+- for box 1, size 20: [9(9), 11(10)]
+- for box 2, size 30: [8(8), 22(12)]
+- for box 3, size 40: [2(0), 3(1), 3(2), 3(3), 5(5), 7(7), 12(11)]
+- remained goods: []
+Finished, duration: 382 us
+
+All goods can be put into the given boxes.
+Finished all, duration: 382 us
+
+Running...
+Sorted boxes: [10, 20, 30, 40]
+Sorted goods: [2, 3, 3, 3, 4, 5, 5, 6, 7, 9, 9, 11, 12, 22]
+=============== Complex check ================
+Find all goods combs for each box, select the best ones to see if they can cover all goods.
+- failed!
+- for box 0, size 10: [5(5), 5(6)]
+- for box 1, size 20: [9(10), 11(11)]
+- for box 2, size 30: [3(3), 6(7), 9(9), 12(12)]
+- for box 3, size 40: [3(1), 3(2), 4(4), 7(8), 22(13)]
+- remained goods: [2(0)]
+Finished, duration: 687 us
+
+The goods cannot be put into the given boxes.
+Finished all, duration: 687 us
+
+Running...
+Sorted boxes: [2, 7, 10, 20]
+Sorted goods: [3, 3, 6, 7, 9, 11]
+=============== Complex check ================
+Find all goods combs for each box, select the best ones to see if they can cover all goods.
+- failed!
+- for box 0, size 2: []
+- for box 1, size 7: [7(3)]
+- for box 2, size 10: [9(4)]
+- for box 3, size 20: [3(1), 6(2), 11(5)]
+- remained goods: [3(0)]
+Finished, duration: 23 us
+
+The goods cannot be put into the given boxes.
+Finished all, duration: 23 us

@@ -1,0 +1,14 @@
+boxes_size: 6, 8
+goods_size: 2, 3, 4, 5
+boxes_size: 9, 10
+goods_size: 9, 5, 5
+boxes_size: 9, 10, 11
+goods_size: 8, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3
+boxes_size: 5, 8, 11, 15, 20, 30, 32
+goods_size: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+boxes_size: 10,20,30,40
+goods_size: 5,3,6,2,11,3,4,12,22,9,7,8,3
+boxes_size: 10,20,30,40
+goods_size: 5,3,6,2,11,3,4,12,22,9,7,9,3,5
+boxes_size: 10,2,20,7
+goods_size: 3,7,11,9,3,6
